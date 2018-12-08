@@ -1,12 +1,12 @@
-## Welcome to GitHub Pages
+## Welcome to our Pages
 
 You can use the [editor on GitHub](https://github.com/zhuang27149/e-sport-company/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### e-sports
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+这个网页旨在展示我们对中国电竞发展的一点认识
 
 ```markdown
 Syntax highlighted code block
