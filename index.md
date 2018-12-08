@@ -106,7 +106,7 @@ According to the chart, the amount of news reached peak which is 377 pieces in 2
 It is consistent with the development of e-sports companies in China to a certain extent, but there are also some abnormal situations. For example, Hainan.
  
 
-## 3.4 Factors relate to e-sports companies
+### 3.4 Factors relate to e-sports companies
 In order to see what differences between them and what factors behind the phenomenon. In our analysis, we choose Hainan Province which has most number of e-sports companies, Shanghai which is a traditional advanced e-sports city in public eyes to see their differences.
 As you can see, Shanghai surpasses Hainan in all aspects.
  
