@@ -5,17 +5,18 @@
 ## 1.Introduction
 
 ### 1.1 Background
-In 2018, the 18th Asian Games in Indonesia made the e-sports a formal project for the first time. In November of the same year, Chinese team IG won the 2018 League of Legends World Championship, leading to an increasing attention to e-sports on Chinese mainstream media and social media, which indicates an improvement on social recognition of e-sports. With the rise and recognition of major events, e-sports is expected to cover a very large market size with a potential of growth.
-
-In 2017, the e-sports market in China has exceeded 65 billion yuan, far exceeding other cultural and creative industries such as literature and film. The e-sports industry is in a fast-growing incremental market. Leading companies like Tencent Entertainment, Ali Sports, Bilibili, famous investors like Wang Sicong, and other investment entities have entered the field of e-sports, bringing a large amount of funds to the upstream of the industrial chain through sponsorship of clubs. The e-sports industry with a complete industrial chain has become a new outlet. At present, the core of the e-sports industry is the event industry chain, including game R&D operations in upstream, events in mid-stream, e-sports media and live broadcast platforms in downstream.
-
-Nowadays, e-sports has got into the sights of more Chinese people, while what behind the glory is a barbaric growth of the e-sports industry. With an upward trend and policy support, the development of China's e-sports industry is wild and noisy. A variety of e-sports companies have sprung up in various cities, launching different projects. Meanwhile, driven by some factors from politics, economy, technology etc., diverse patterns of development in e-sports industry have shown in different cities.
-
-In our research, we’d like to figure out the development trend of China’s e-sports from two dimensions: in reality and news, like the city distribution of China’s e-sports-related companies, what factors may relate to them, how news reports e-sports in China and if there’s difference between the reality and news.
+On August 2,2011, at 3 am, Wang Sicong posted a microblog, “Strong entry, integration of e-sports(强势进入，整合电竞)”, with a picture of the logo of the IG Club which was experienceda reorganization that time. With five hundred million yuan, Wang wanted to paly a chanllenging game.
+However, the post received only little discussion.The waiters have no higher expectations for this rich second generation: ordinary e-sports enthusiasts question his poaching behavior, and pessimistic predictions of the decline of the e-sports industr; 5 hunderd billion did not provoke a splash in the broader market,there was few media coverage of the incident.
+People never thought about that they would pay attention to this post after seven years, and send the comments like "IG is champion" over and over again. Similarly, those who are good at analysis and calculations did not expect e-sports would grow into a eye-catching market.
+Nowadays, e-sports has got into the sights of more Chinese people, while what behind the glory is a barbaric growth of the e-sports industry. A variety of e-sports companies have sprung up in various cities, launching different projects.
+Meanwhile, mainstream media's attitude towards e-sports is also gradually changing. But it only pay more attention to famous players and investors.
+Hence, our project is motivated by such trend and we would like to examine the development of China’s e-sports companies from two dimensions: in reality and in news. Like the city distribution of China’s e-sports-related companies, what factors may relate to them, how e-sports is reported in Chinese news and if there is any difference between the reality and news. 
   
 ### 1.2 Other works review
-Focus on e-sports players, teams and leading game companies. The main genres are feature stories and in-depth reports. For example，there are many profiles of some famous e-sport players like Sky(Li Xiaofeng ) and Uzi(Jian Zihao) on GQ magazine.
-Besides，there are several reports using data visualization, but the principle sources are industrial reports, including number of game players and revenue of big companies which has rare analysis on relationship. For example, the paper, a new media of Shanghai has pay more attention on e-sports, they use data to explain the development of Shanghai’s e-sport industry.
+Previous works about e-sports mainly focus on e-sports players, teams and leading game companies. In terms of e-sports players, most of the forms are feature stories and in-depth reports. GQ magazine did some profiles of famous e-sports players like Sky(Li Xiaofeng) and Uzi(Jian Zihao) .
+What's more, there are some reports focusing on fields related to e-sports.DT Finance focuses on e-sports consumptive places, comparing the development of e-sports hotels in Zhengzhou and Shanghai. As a result, DT Finance found that the level of development of e-sports industry is not directly related to the rise of e-sports hotels, and e-sports hotels are more matched with the consumer demands of game players in second and third-tier cities.
+In terms of visualizaion, there's little reports using data visualization about e-sporsts . The paper, a new media of Shanghai, used data to explain the development of Shanghai’s e-sport industry. The sources are from industrial reports, including number of game players and revenue of big companies. 
+To sum up, there's little visualized reports about e-sports field considering e-sports companies's developing trend, city distribution, what factors relate to them and how news reports them.
 
 ### 1.3 Research Questions
 Based on previous work and our own interest, we come up with our research questions :
@@ -138,3 +139,11 @@ However, when considering relating factors, Shanghai surpasses Hainan in all asp
 ![factorsofshanghaivshainan](https://github.com/zhuang27149/e-sport-company/blob/master/images/4.factors-shanghaivshainan.png)
 
 Besides, we find a government document of General Office of the State Council, PRC（国务院），which directly guide the development of Hainan province. Sports lottery is supported by the government. Considering Hainan’s poor infrastructure, they paid more attention to internet industry. And e-sports is the only field having competitive elements. That is maybe the reason why there are so many companies located in Hainan.
+
+Reference
+参考资料：
+[1]何书瑶. (2018). 魔都不相信电竞酒店. Retrieved from https://mp.weixin.qq.com/s?__biz=MzA5Mzk5MDM5MA==&mid=2650826650&idx=1&sn=ce79100ee862e9fffd6d60fd5673c473&chksm=8ba1bb03bcd63215b78583e323de8aa3931699dc0fec9405b36e06109a1cb0b3bc71f5ccb06a&scene=0&xtrack=1#rd
+[2]一图到底｜上海说要打造电竞之都，现在怎么样了？_美数课_澎湃新闻-The Paper. (2018). Retrieved from https://www.thepaper.cn/newsDetail_forward_2371575
+[3]
+
+
