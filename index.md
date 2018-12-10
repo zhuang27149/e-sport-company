@@ -136,7 +136,7 @@ In order to see what differences between them and what factors behind the phenom
 
 However, when considering relating factors, Shanghai surpasses Hainan in all aspects.
  
-![factorsofshanghaivshainan](https://github.com/zhuang27149/e-sport-company/blob/master/images/4.factors-shanghaivshainan.png)
+![factorsofshanghaivshainan](https://github.com/zhuang27149/e-sport-company/blob/master/images/4.factors.png)
 
 Besides, we find a government document《关于支持海南全面深化改革开放的指导意见(Guidance on supporting hainan in comprehensively deepening reform and opening up)》 of General Office of the State Council, PRC, which was published in April of 20018, directly guides the development of Hainan province. It is said that "We will vigorously develop new cultural consumption, such as animation and games, Internet culture and digital content, and upgrade consumption of traditional culture" and "We will explore the development of competitive sports lottery and large international competitions that open lottery,explore ways to support the development of tourism projects in terms of space planning, land supply and resource utilization".
 Sports lottery is supported by the government. Considering Hainan’s poor infrastructure, they paid more attention to internet industry. And e-sports is the only field having competitive elements. That is maybe the reason why there are so many companies located in Hainan.
