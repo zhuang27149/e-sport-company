@@ -67,7 +67,8 @@ Source: Shanghai Statistical Yearbook (http://tjj.sh.gov.cn/html/sjfb/201801/100
 
 
 ### 2.2 Data Acquisition
-We choose sina.com as the website to scrape and the picture is a screen snapshot of the targeted webpages and “inspecting the element” window. It is a html page, and we use Beautifulsoup and request to scrape the pages. There are two major difficulties here: one is page looping and another is source split. Based on web observation, we find the rule of the page number changing. Therefore we control the page looping changing by generating sequence. Besides, we split date and source form one list；meanwhile，we split year，month and day from date. That help us a lot in data cleaning. 
+We choose sina.com as the website to scrape and the picture is a screen snapshot of the targeted webpages and “inspecting the element” window. It is a html page, and we use Beautifulsoup and request to scrape the pages. There are two major difficulties here: one is page looping and another is source split. Based on web observation, we find the rule of the page number changing. Therefore we control the page looping changing by generating sequence. Besides, we split date and source form one list；meanwhile，we split year，month and day from date. That help us a lot in data cleaning.
+
 ![webpage](https://github.com/zhuang27149/e-sport-company/blob/master/images/webpage.png)
 
 
@@ -85,10 +86,12 @@ Firstly, about the data that we got from sina.news. According to the keyword ‘
 ![cleandataofsinanews](https://github.com/zhuang27149/e-sport-company/blob/master/images/tianyancha-clean.png)
 (the clean data)
 
+
 #### 2.3.2 Data processing of tianyancha
 Next, we cleaned the data from tianyancha. On one hand, for the column of ‘注册资本’ is string not numeric so it’ unable to make a ranking, so we change this string into numeric and create a new list which is called ’moneylist’. And its value can be sorted.
 On the other hand, we only need data of year when the e-sports companies established, however the column of ‘成立日期’ contains too much information. So we spited it and created a new list ‘years’.
 The new data frame is like this.
+
 ![cleandataoftianyancha](https://github.com/zhuang27149/e-sport-company/blob/master/images/tianyancha-clean.png)
 
  
@@ -111,6 +114,7 @@ Obviously, Hainan Province plays an active role in e-sports companies which is q
 ### 3.3 How news report e-sports in China
 According to the chart, the amount of news reached peak which is 377 pieces in 2017. Also, from 2016, the amount increases quickly. It shows the shifting of media attention. On the whole, the media still focus on famous inventors and big companies(such as Tencent and Blizzard), and the geographical center is Shanghai.
 It is consistent with the development of e-sports companies in China to a certain extent, but there are also some abnormal situations. For example, Hainan.
+
 ![newsreport](https://github.com/zhuang27149/e-sport-company/blob/master/images/3.newsreport.png)
  
 
@@ -151,43 +155,3 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>ECharts</title>
-    <!-- 引入 echarts.js -->
-    <script src="echarts.min.js"></script>
-</head>
-<body>
-    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 600px;height:400px;"></div>
-    <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
-
-        // 指定图表的配置项和数据
-        var option = {
-            title: {
-                text: 'ECharts 入门示例'
-            },
-            tooltip: {},
-            legend: {
-                data:['销量']
-            },
-            xAxis: {
-                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-            },
-            yAxis: {},
-            series: [{
-                name: '销量',
-                type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
-            }]
-        };
-
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-    </script>
-</body>
-</html>
