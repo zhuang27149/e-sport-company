@@ -98,13 +98,19 @@ The new data frame is like this.
 ## 3.Results
 ### 3.1 The development trend of China’s e-sports-related companies
 After processing of data from tianyancha, we can see the whole development trend of China’s e-sports-related companies, that it shows radical increase since 2014, especially in recent 3 years.
+
+![developmenttrend](https://github.com/zhuang27149/e-sport-company/blob/master/images/1.developmenttrend-China.png)
+
  
 ### 3.2 The city distribution of China’s e-sports-related companies
 From the distribution of e-sports companies among provinces in China, Top ten provinces which have most e-sports companies are on the chart. We can see that over 40% e-sports companies are in Hainan Province and Guangdong Province, which is quite different from our impression.
+
 ![citydistribution](https://github.com/zhuang27149/e-sport-company/blob/master/images/2.Distribution-China.png)
 
 
 To be more specific, in Guangdong Province, the total number of e-sports related companies is 273 , Shenzhen takes up 213 while there are only 15 e-sports companies in Guangzhou.
+ 
+![citydistribution-5places](https://github.com/zhuang27149/e-sport-company/blob/master/images/2.distribution-5places.png)
  
 
 And this chart shows how many e-sports-related companies establishing every year. The red line represents China, the blue one is Hainan which increases very rapidly.
