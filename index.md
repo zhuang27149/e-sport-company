@@ -72,8 +72,6 @@ We choose sina.com as the website to scrape and the picture is a screen snapshot
 ![webpage](https://github.com/zhuang27149/e-sport-company/blob/master/images/webpage.png)
 
 
-
-
 ### 2.3 Data Processing
 The data processing contains two parts. One is data processing of sina.news and the other is data processing of tianyancha.
 2.3.1 Data processing of sina.news
@@ -107,17 +105,20 @@ From the distribution of e-sports companies among provinces in China, Top ten pr
 
 ![citydistribution](https://github.com/zhuang27149/e-sport-company/blob/master/images/2.Distribution-China.png)
 
-
 To be more specific, in Guangdong Province, the total number of e-sports related companies is 273 , Shenzhen takes up 213 while there are only 15 e-sports companies in Guangzhou.
  
 ![citydistribution-5places](https://github.com/zhuang27149/e-sport-company/blob/master/images/2.distribution-5places.png)
  
-
 And this chart shows how many e-sports-related companies establishing every year. The red line represents China, the blue one is Hainan which increases very rapidly.
+
+![citydistribution-5places](https://github.com/zhuang27149/e-sport-company/blob/master/images/2.city-distribution-5placesincrease.png)
 
 In addition, we can see the registered capital of Hainan’s e-sports companies from the scatter chart. Most clustered in 100,000,000.
 
+![capital](https://github.com/zhuang27149/e-sport-company/blob/master/images/2.capital.png)
+
 Obviously, Hainan Province plays an active role in e-sports companies which is quite from our former impression. 
+ 
  
 ### 3.3 How news report e-sports in China
 According to the chart, the amount of news reached peak which is 377 pieces in 2017. Also, from 2016, the amount increases quickly. It shows the shifting of media attention. On the whole, the media still focus on famous inventors and big companies(such as Tencent and Blizzard), and the geographical center is Shanghai.
@@ -130,40 +131,10 @@ It is consistent with the development of e-sports companies in China to a certai
 In order to see what differences between them and what factors behind the phenomenon. In our analysis, we choose Hainan Province which has most number of e-sports companies, Shanghai which is a traditional advanced e-sports city in public eyes to see their differences.
 In order to see what differences between them and what factors behind the phenomenon. In our analysis, we choose Hainan Province which has most number of e-sports companies, Shanghai which is a traditional advanced e-sports city in public eyes to see their differences. The chart shows the development trend of e-sports companies in this two places and Hainan surpassed Shanghai after 2017.
 
+![shanghaivshainan](https://github.com/zhuang27149/e-sport-company/blob/master/images/4.shanghaivshainan.png)
 
 However, when considering relating factors, Shanghai surpasses Hainan in all aspects.
  
-
 ![factorsofshanghaivshainan](https://github.com/zhuang27149/e-sport-company/blob/master/images/4.factors-shanghaivshainan.png)
 
-However, we find a government document of General Office of the State Council, PRC（国务院），which directly guide the development of Hainan province. Sports lottery is supported by the government. Considering Hainan’s poor infrastructure, they paid more attention to internet industry. And e-sports is the only field having competitive elements. That is maybe the reason why there are so many companies located in Hainan.
-
-```markdown
-Syntax highlighted code block
-
-# Hello？
-## Can you hear me clearly？
-### let‘s see something interesting！
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zhuang27149/e-sport-company/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Besides, we find a government document of General Office of the State Council, PRC（国务院），which directly guide the development of Hainan province. Sports lottery is supported by the government. Considering Hainan’s poor infrastructure, they paid more attention to internet industry. And e-sports is the only field having competitive elements. That is maybe the reason why there are so many companies located in Hainan.
