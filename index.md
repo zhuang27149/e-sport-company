@@ -111,7 +111,7 @@ In order to see what differences between them and what factors behind the phenom
 As you can see, Shanghai surpasses Hainan in all aspects.
  
 However, we find a government document of General Office of the State Council, PRC（国务院），which directly guide the development of Hainan province. Sports lottery is supported by the government. Considering Hainan’s poor infrastructure, they paid more attention to internet industry. And e-sports is the only field having competitive elements. That is maybe the reason why there are so many companies located in Hainan.
-
+[Mozilla](LICENSE)(file:///Users/admin/Downloads/line-simple.html)
 
 
 
