@@ -93,6 +93,8 @@ After processing of data from tianyancha, we can see the whole development trend
  
 ### 3.2 The city distribution of China’s e-sports-related companies
 From the distribution of e-sports companies among provinces in China, Top ten provinces which have most e-sports companies are on the chart. We can see that over 40% e-sports companies are in Hainan Province and Guangdong Province, which is quite different from our impression.
+![citydistribution](https://github.com/zhuang27149/e-sport-company/blob/master/Distribution-China.png)
+
 
 To be more specific, in Guangdong Province, the total number of e-sports related companies is 273 , Shenzhen takes up 213 while there are only 15 e-sports companies in Guangzhou.
  
@@ -104,6 +106,7 @@ Obviously, Hainan Province plays an active role in e-sports companies which is q
 ### 3.3 How news report e-sports in China
 According to the chart, the amount of news reached peak which is 377 pieces in 2017. Also, from 2016, the amount increases quickly. It shows the shifting of media attention. On the whole, the media still focus on famous inventors and big companies(such as Tencent and Blizzard), and the geographical center is Shanghai.
 It is consistent with the development of e-sports companies in China to a certain extent, but there are also some abnormal situations. For example, Hainan.
+![newsreport]()
  
 
 ### 3.4 Factors relate to e-sports companies
@@ -111,7 +114,6 @@ In order to see what differences between them and what factors behind the phenom
 As you can see, Shanghai surpasses Hainan in all aspects.
  
 However, we find a government document of General Office of the State Council, PRC（国务院），which directly guide the development of Hainan province. Sports lottery is supported by the government. Considering Hainan’s poor infrastructure, they paid more attention to internet industry. And e-sports is the only field having competitive elements. That is maybe the reason why there are so many companies located in Hainan.
-![citydistribution](https://github.com/zhuang27149/e-sport-company/blob/master/Distribution-China.png)
 
 
 
