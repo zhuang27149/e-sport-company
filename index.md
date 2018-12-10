@@ -142,9 +142,12 @@ Besides, we find a government document《关于支持海南全面深化改革开
 Sports lottery is supported by the government. Considering Hainan’s poor infrastructure, they paid more attention to internet industry. And e-sports is the only field having competitive elements. That is maybe the reason why there are so many companies located in Hainan.
 
 Reference
-参考资料：
-[1]何书瑶. (2018). 魔都不相信电竞酒店. Retrieved from https://mp.weixin.qq.com/s?__biz=MzA5Mzk5MDM5MA==&mid=2650826650&idx=1&sn=ce79100ee862e9fffd6d60fd5673c473&chksm=8ba1bb03bcd63215b78583e323de8aa3931699dc0fec9405b36e06109a1cb0b3bc71f5ccb06a&scene=0&xtrack=1#rd
-[2]一图到底｜上海说要打造电竞之都，现在怎么样了？_美数课_澎湃新闻-The Paper. (2018). Retrieved from https://www.thepaper.cn/newsDetail_forward_2371575
-[3]
+[1]何书瑶. (2018). 魔都不相信电竞酒店. Retrieved from                
+https://mp.weixin.qq.com/s?__biz=MzA5Mzk5MDM5MA==&mid=2650826650&idx=1&sn=ce79100ee862e9fffd6d60fd5673c473&chksm=8ba1bb03bcd63215b78583e323de8aa3931699dc0fec9405b36e06109a1cb0b3bc71f5ccb06a&scene=0&xtrack=1#rd
+[2] 一图到底｜上海说要打造电竞之都，现在怎么样了？_美数课_澎湃新闻-The Paper. (2018). Retrieved from https://www.thepaper.cn/newsDetail_forward_2371575
+[3] 国家数据. (2018). Retrieved from http://data.stats.gov.cn/search.htm?s=%E4%B8%8A%E6%B5%B7
+[4] 宽带发展联盟. (2018). 2018年Q1中国宽带速率状况报告 [Ebook] (pp. 7-9). 
+Retrieved from http://www.199it.com/archives/746376.html
+
 
 
