@@ -68,6 +68,8 @@ Source: Shanghai Statistical Yearbook (http://tjj.sh.gov.cn/html/sjfb/201801/100
 
 ### 2.2 Data Acquisition
 We choose sina.com as the website to scrape and the picture is a screen snapshot of the targeted webpages and “inspecting the element” window. It is a html page, and we use Beautifulsoup and request to scrape the pages. There are two major difficulties here: one is page looping and another is source split. Based on web observation, we find the rule of the page number changing. Therefore we control the page looping changing by generating sequence. Besides, we split date and source form one list；meanwhile，we split year，month and day from date. That help us a lot in data cleaning. 
+![webpage](https://github.com/zhuang27149/e-sport-company/blob/master/images/webpage.png)
+
 
 
 
@@ -76,15 +78,18 @@ The data processing contains two parts. One is data processing of sina.news and 
 2.3.1 Data processing of sina.news
 Firstly, about the data that we got from sina.news. According to the keyword ‘电竞’ and ‘电子竞技’, we got two csv.Then we merged this two csv into one and dropped the duplicated news. Meanwhile, we aim to look up news from recent 10 years so we set conditions and got news from 2009 to 2018.
  
+ ![rawdataofsinanews](https://github.com/zhuang27149/e-sport-company/blob/master/images/sinanews-raw.png)
 (the raw data)
 
- 
+
+![cleandataofsinanews](https://github.com/zhuang27149/e-sport-company/blob/master/images/tianyancha-clean.png)
 (the clean data)
 
 #### 2.3.2 Data processing of tianyancha
 Next, we cleaned the data from tianyancha. On one hand, for the column of ‘注册资本’ is string not numeric so it’ unable to make a ranking, so we change this string into numeric and create a new list which is called ’moneylist’. And its value can be sorted.
 On the other hand, we only need data of year when the e-sports companies established, however the column of ‘成立日期’ contains too much information. So we spited it and created a new list ‘years’.
 The new data frame is like this.
+![cleandataoftianyancha](https://github.com/zhuang27149/e-sport-company/blob/master/images/tianyancha-clean.png)
 
  
 ## 3.Results
@@ -93,7 +98,7 @@ After processing of data from tianyancha, we can see the whole development trend
  
 ### 3.2 The city distribution of China’s e-sports-related companies
 From the distribution of e-sports companies among provinces in China, Top ten provinces which have most e-sports companies are on the chart. We can see that over 40% e-sports companies are in Hainan Province and Guangdong Province, which is quite different from our impression.
-![citydistribution](https://github.com/zhuang27149/e-sport-company/blob/master/Distribution-China.png)
+![citydistribution](https://github.com/zhuang27149/e-sport-company/blob/master/images/2.Distribution-China.png)
 
 
 To be more specific, in Guangdong Province, the total number of e-sports related companies is 273 , Shenzhen takes up 213 while there are only 15 e-sports companies in Guangzhou.
@@ -106,7 +111,7 @@ Obviously, Hainan Province plays an active role in e-sports companies which is q
 ### 3.3 How news report e-sports in China
 According to the chart, the amount of news reached peak which is 377 pieces in 2017. Also, from 2016, the amount increases quickly. It shows the shifting of media attention. On the whole, the media still focus on famous inventors and big companies(such as Tencent and Blizzard), and the geographical center is Shanghai.
 It is consistent with the development of e-sports companies in China to a certain extent, but there are also some abnormal situations. For example, Hainan.
-![newsreport]()
+![newsreport](https://github.com/zhuang27149/e-sport-company/blob/master/images/3.newsreport.png)
  
 
 ### 3.4 Factors relate to e-sports companies
@@ -114,7 +119,7 @@ In order to see what differences between them and what factors behind the phenom
 As you can see, Shanghai surpasses Hainan in all aspects.
  
 However, we find a government document of General Office of the State Council, PRC（国务院），which directly guide the development of Hainan province. Sports lottery is supported by the government. Considering Hainan’s poor infrastructure, they paid more attention to internet industry. And e-sports is the only field having competitive elements. That is maybe the reason why there are so many companies located in Hainan.
-
+![factorsofshanghaivshainan](https://github.com/zhuang27149/e-sport-company/blob/master/images/4.factors-shanghaivshainan.png)
 
 
 ```markdown
