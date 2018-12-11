@@ -98,13 +98,13 @@ The new data frame is like this.
 ### 3.1 The development trend of China’s e-sports-related companies
 After processing of data from tianyancha, we can see the whole development trend of China’s e-sports-related companies, that it shows radical increase since 2014, especially in recent 3 years.
 
-![developmenttrend](https://github.com/zhuang27149/e-sport-company/blob/master/images/1.developmenttrend-China.png)
+![developmenttrend](https://github.com/zhuang27149/e-sport-company/blob/master/images/National.svg)
 
  
 ### 3.2 The city distribution of China’s e-sports-related companies
 From the distribution of e-sports companies among provinces in China, Top ten provinces which have most e-sports companies are on the chart. We can see that Hainan Province has got most e-sports companies, next is Guangdong Province.
 
-![citydistribution](https://github.com/zhuang27149/e-sport-company/blob/master/images/2.Distribution-China.png)
+![citydistribution](https://github.com/zhuang27149/e-sport-company/blob/master/images/Provinces.svg)
 
 To be more specific, in Guangdong Province, the total number of e-sports related companies is 273 , Shenzhen takes up 213 while there are only 15 e-sports companies in Guangzhou.
  
@@ -112,7 +112,7 @@ To be more specific, in Guangdong Province, the total number of e-sports related
  
 And this chart shows how many e-sports-related companies establishing every year. The red line represents China, the blue one is Hainan which increases very rapidly.
 
-![citydistribution-5places](https://github.com/zhuang27149/e-sport-company/blob/master/images/2.city-distribution-5placesincrease.png)
+![citydistribution-5places](https://github.com/zhuang27149/e-sport-company/blob/master/images/five%20regions.svg)
 
 In addition, we can see the registered capital of Hainan’s e-sports companies from the scatter chart. Most clustered in 100,000,000.
 
@@ -132,7 +132,7 @@ It is consistent with the development of e-sports companies in China to a certai
 In order to see what differences between them and what factors behind the phenomenon. In our analysis, we choose Hainan Province which has most number of e-sports companies, Shanghai which is a traditional advanced e-sports city in public eyes to see their differences.
 In order to see what differences between them and what factors behind the phenomenon. In our analysis, we choose Hainan Province which has most number of e-sports companies, Shanghai which is a traditional advanced e-sports city in public eyes to see their differences. The chart shows the development trend of e-sports companies in this two places and Hainan surpassed Shanghai after 2017.
 
-![shanghaivshainan](https://github.com/zhuang27149/e-sport-company/blob/master/images/4.shanghaivshainan.png)
+![shanghaivshainan](https://github.com/zhuang27149/e-sport-company/blob/master/images/Hainan%26Shanghai.svg)
 
 However, when considering relating factors, Shanghai surpasses Hainan in all aspects.
  
