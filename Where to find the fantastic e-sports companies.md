@@ -102,14 +102,9 @@ df = pd.DataFrame({'title':titlelist,
                  'month':monthlist,
                   'day':daylist})
 
-df
-
 df.to_csv("sinanews_dianjing1.csv")
 ```
-```
-df_dianjing1 = pd.read_csv('sinanews_dianjing1.csv')
-df_dianjing1.head()
-```
+
 
 ### 2.3 Data Processing
 There are two parts of the data processing, one is data processing of Sina financial news of e-sports, and the other is data processing of e-sports related companies from Tianyancha.
