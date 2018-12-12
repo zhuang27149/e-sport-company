@@ -207,9 +207,6 @@ df.shape
 df.columns
 ```
 ```
-df.head()
-```
-```
 #分组
 places=df.groupby(by='所属省份').size()
 ```
@@ -349,11 +346,7 @@ plt.tick_params(axis='both',which='both',labelsize=14)
 plt.show
 #plt.savefig('hainan_capital.png',bbox_inches='tight')
 ```
-```
-#pygal module
-num_5=[places['海南'],gd_group['深圳市'],places['上海'],places['北京'],gd_group['广州市']]
-num_5
-```
+
 ```
 num_5=[places['海南'],gd_group['深圳市'],places['上海'],places['北京'],gd_group['广州市']]
 hist=pygal.Bar()
