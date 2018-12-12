@@ -2,7 +2,7 @@
 
 
 
-## 1.Introduction
+## 1. Introduction
 
 ### 1.1 Background
 On August 2, 2011, at 3 am, Wang Sicong posted a microblog, “Strong entry, integration of e-sports(强势进入，整合电竞)”, with a picture of the logo of the IG Club which was experiencing a reorganization that time. With 500,000,000 yuan, Wang wanted to play a challenging game.
@@ -27,7 +27,7 @@ More specifically, what are the correlates of variation in e-sports development 
 Variables to be taken into consideration are as follows: politics (policy support/tax), economy (GDP, industrial structure), technology (average network speed, Internet access costs), population (population structure), industrial clusters (ACG companies), etc.
 RQ4.How does Chinese news cover e-sports? Is there any difference between the reality and news?
 
-## 2.Method
+## 2. Method
 ### 2.1 Data Source
 Our data source includes three parts: data of e-sports-related companies, financial news related to e-sports and data of other factors.
 #### 2.1.1 Data of e-sports-related companies:
@@ -43,6 +43,7 @@ Lastly, we wonder  if there are any other factors that relate to the development
 ### 2.2 Data Acquisition
 The picture below is one of our targeted webpages, Sina News, in inspecting mode.  We found that Sina News was built in html pages, so we used Request and Beautifulsoup modules to scrape and parse the pages. In the process of  data acquisition, we encountered two major difficulties: one was page looping and the other was source split. Financial news related to e-sports on Sina News were over 80 pages, so the address of website that we crawled was changing. Based on web observation, we found the rule of the changing page number of Sina News. Therefore, we controlled the page looping by generating a sequence of numbers that arranged in orders. 
 Originanly, we decided to scrape the news pages where fields like titles and dates were structured. However, some of the news pages were deleted so we turned to crawl fields in search results pages. There was a new problem :most of the raw data were stored in the same line of code. To solve this problem, we split date and source from one list, as well as splitting year, month and day from date. After splitting data into appropriate classification, data cleaning became much easier to execute. 
+Picture 1   Screenshot of Sina News Website in inspecting mode
 ![webpage](https://github.com/zhuang27149/e-sport-company/blob/master/images/webpage.png)
 
 ```
@@ -181,19 +182,19 @@ for a, b in zip(x_1, y_1):
 plt.legend()
 plt.show()  #显示图
 ```
- 
+ Table 1   An overview of raw data from Sina News
  ![rawdataofsinanews](https://github.com/zhuang27149/e-sport-company/blob/master/images/sinanews-raw.png)
-(the raw data)
 
-
-![cleandataofsinanews](https://github.com/zhuang27149/e-sport-company/blob/master/images/tianyancha-clean.png)
-(the clean data)
+Table 2   An overview of clean data from Sina News
+![cleandataofsinanews](https://github.com/zhuang27149/e-sport-company/blob/master/images/sinanews-clean.png)
 
 
 #### 2.3.2 Data processing of tianyancha
 Next, we cleaned the data from Tianyancha. On one hand,  the column of “注册资本(registered capital)”was string instead of numeric so it was unable to make a ranking.We transformed   the string type into numeric and created a new column called ’moneylist’, whose value can be sorted.
 On the other hand, we only need data of years when the e-sports companies were established, while  the column of “成立日期(date of establishment)” contained too much information. So, we extracted the years and put them into a new list “years”.
 After adjusting the column, the new data frame is as shownin this table below.
+
+Table 3   An overview of data from Tianyancha
 ![cleandataoftianyancha](https://github.com/zhuang27149/e-sport-company/blob/master/images/tianyancha-clean.png)
 ```
 import pandas as pd
@@ -397,25 +398,29 @@ line_national.add('National',nation_data['2009':'2018'].values)
 line_national.render_to_file('National.svg')
 ```
  
-## 3.Results
+## 3. Results
 ### 3.1 The development trend of China’s e-sports-related companies
 After processing data from Tianyancha, as the chart below shows, the number of China’s e-sports-related companies have radically increased since 2014, especially in the last 3 years.
 
+Chart 1   E-sports companies developing trends in China
 ![developmenttrend](https://github.com/zhuang27149/e-sport-company/blob/master/images/National.svg)
 
  
 ### 3.2 The city distribution of China’s e-sports-related companies
 In terms of the distribution of e-sports companies among provinces in China, Top ten provinces which have most e-sports companies are on the chart. We can see that Hainan Province has got most e-sports companies, followed by Guangdong Province.
 
+Chart 2   Numbers of e-sports companies in different regions
 ![citydistribution](https://github.com/zhuang27149/e-sport-company/blob/master/images/Provinces.svg)
 
 To be more specific, in Guangdong Province, the total number of e-sports-related companies is 273, among which Shenzhen takes up 213 while there are only 15 e-sports companies in Guangzhou.
- 
+
+Chart 3   Numbers of e-sports companies in Hainan, Shenzhen, Shanghai top places, Beijing and Guangzhou
 ![citydistribution-5places](https://github.com/zhuang27149/e-sport-company/blob/master/images/2.distribution-5places.png)
  
 And this chart shows how many e-sports-related companies were established every year. The red line represents China and the blue one is Hainan which increases very rapidly.
 In addition, we can see the registered capital of Hainan’s e-sports companies from the scatter chart. Most clustered in 100,000,000.
 
+Chart 4   E-sports-related Companies Establishing Trend
 ![capital](https://github.com/zhuang27149/e-sport-company/blob/master/images/2.capital.png)
 
 Obviously, Hainan Province is playing an active role in e-sports industry which is quite different from our former impression. 
@@ -425,6 +430,7 @@ Obviously, Hainan Province is playing an active role in e-sports industry which 
 According to the chart, the amount of news reached peak which is 377 pieces in 2017. Also, since 2016, the amount has increased quickly. It shows the shifting of media attention. On the whole, the media still focus on famous inventors and big enterprises (such as Tencent and Blizzard), and the industrial center is Shanghai.
 It is consistent with the development of e-sports companies in China to a certain extent, but there are also some abnormal situations. For example, Hainan.
 
+Chart 5   News trend about e-sports in China
 ![newsreport](https://github.com/zhuang27149/e-sport-company/blob/master/images/3.newsreport.png)
  
 
@@ -432,14 +438,20 @@ It is consistent with the development of e-sports companies in China to a certai
 Based on the above result, we find that as the flourish of the e-sports industry in China, the development gap of e-sports companies among different regions has been enlarged. We could not help wondering what factors lead to the varied degree of development of e-sports companies in different regions. In order to figure out  what differences and what factors are behind the phenomenon, we decided to select Hainan province and Shanghai as two representative regions for comparative analysis. On one hand, we chose Hainan province due to the above data results. Hainan Province unexpectedly has the largest number of e-sports companies, although in the public impression it is famous for tourism. On the other hand, we chose Shanghai, a first-tier city with a well-developed e-sports industry in public eyes. According to CNG’s report, more than 40% of e-sports competitions are held in Shanghai, as well as more than half of the top 20 well-known e-sports clubs in China have their head office in Shanghai, such as WE, iG, EDG and RNG. 
 The chart shows the development trend of e-sports companies in this two places and Hainan surpassed Shanghai after 2017.
 
+Chart 6   Development trend of e-sports companies in Hainan and Shanghai
 ![shanghaivshainan](https://github.com/zhuang27149/e-sport-company/blob/master/images/Hainan%26Shanghai.svg)
 
 However, when considering related factors, Shanghai surpasses Hainan in all aspects.
  
+Table 4   E-sports company developing related factors in China, Shanghai, Hainan
 ![factorsofshanghaivshainan](https://github.com/zhuang27149/e-sport-company/blob/master/images/4.factors.png)
 
 Besides, we notice a government document《关于支持海南全面深化改革开放的指导意见(Guidance on supporting Hainan in comprehensively deepening reform and opening up)》 of General Office of the State Council, PRC, which was published in April of 20018, directly guides the development of Hainan province. It is said that “We will vigorously develop new cultural consumption, such as animation and games, Internet culture and digital content, and upgrade consumption of traditional culture” and “We will explore the development of competitive sports lottery and large international competitions that open lottery, explore ways to support the development of tourism projects in terms of space planning, land supply and resource utilization".
 Sports lottery is supported by the government. Considering Hainan’s poor infrastructure, they pay more attention to Internet industry. And e-sports is the only field probably having competitive elements. That may be the reason why there are so many companies located in Hainan.
+
+## 4. Conclusion
+With the rapid development of China’s e-sports industry, different regions show different development trends and patterns, among which Hainan Province has got most e-sports companies. It seems that it’s experiencing a soundless transformation of economy. What’s behind this region and how it can be one of the most important industrial hubs with largest number of e-sports companies are worth further study. Through the further study, it may help us know better about China’s e-sports industry and economic transformation.
+
 
 ## Reference
 [1]何书瑶. (2018). 魔都不相信电竞酒店. Retrieved from                
