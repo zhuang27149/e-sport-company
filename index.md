@@ -194,10 +194,208 @@ plt.show()  #显示图
 Next, we cleaned the data from Tianyancha. On one hand,  the column of “注册资本(registered capital)”was string instead of numeric so it was unable to make a ranking.We transformed   the string type into numeric and created a new column called ’moneylist’, whose value can be sorted.
 On the other hand, we only need data of years when the e-sports companies were established, while  the column of “成立日期(date of establishment)” contained too much information. So, we extracted the years and put them into a new list “years”.
 After adjusting the column, the new data frame is as shownin this table below.
-
-
 ![cleandataoftianyancha](https://github.com/zhuang27149/e-sport-company/blob/master/images/tianyancha-clean.png)
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import pygal
+```
+```
+!pip install pygal
+```
+```
+df=pd.read_excel('121.xlsx',encoding='utf-8')
+df.shape
+```
+```
+df.columns
+```
+```
+df.head()
+```
+```
+#分组
+places=df.groupby(by='所属省份').size()
+```
+```
+#查看
+for k in places.index:
+    print(k, places[k])
+```
+```
+type(places)
+```
+```
+provinces=['Hainan','Guangdong','Jiangsu','Anhui','Shanghai','Zhejiang','Shanxi','Shandong','Chongqing','Beijing']
+#for i in places[0:9]:
+    #places.index[i]=provinces[i]
+```
+```
+#排序
+places.sort_values(ascending=False,inplace=True)
+```
+```
+plt.figure(figsize=(16,9)) 
+plt.bar(provinces,places[0:10].values)   
+```
+```
+#海南逐年变化，要补全没有的年份
+hainan=df[df['所属省份']=='海南'].groupby('years').size()
+hainan_data=hainan.cumsum()
 
+for i in range(2009,2019):
+    if str(i) not in hainan_data.index:
+        if str(i-1) not in hainan_data.index:
+            hainan_data[str(i)]=0
+        else:
+                hainan_data[str(i)]=hainan_data[str(i-1)]
+
+hainan_data.sort_index(ascending=True,inplace=True)
+```
+```
+shanghai=df[df['所属省份']=='上海'].groupby('years').size()
+shanghai.cumsum()
+```
+```
+#上海逐年变化，要补全没有的年份
+shanghai=df[df['所属省份']=='上海'].groupby('years').size()
+shanghai_data=shanghai.cumsum()
+
+for i in range(1998,2019):
+    if str(i) not in shanghai_data.index:
+        if str(i-1) not in shanghai_data.index:
+            shanghai_data[str(i)]=0
+        else:
+                shanghai_data[str(i)]=shanghai_data[str(i-1)]
+
+shanghai_data.sort_index(ascending=True,inplace=True)
+shanghai_data
+```
+```
+gd_group=df[df['所属省份']=='广东'].groupby('所属市区').size()
+gd_group
+```
+```
+#北上深琼条形图
+top4=pd.DataFrame({'top_places':['Hainan','Shenzhen','Shanghai','Beijing','Guangzhou'],
+                   'nums':[places['海南'],gd_group['深圳市'],places['上海'],places['北京'],gd_group['广州市']]})
+top4.plot(x='top_places',kind='bar',legend=False,rot=0)  
+
+plt.show()
+```
+```
+#十年变化折线图（全国+地方）
+df['years']=[str(i).split('-')[0] for i in df['成立日期']]
+```
+```
+num_year=df.groupby('years').size()
+num_year.head
+```
+```
+nation_data=num_year.cumsum()
+allyears=list(nation_data['2009':'2018'].index)
+allyears
+```
+```
+def line_fg(x,y,c):
+    plt.plot(x,y,'-',linewidth=2, color = c,marker = 'o',markersize = 6,markerfacecolor='brown' )    
+    for a, b in zip(x, y):
+        plt.text(a, b, b, ha='center', va='bottom', fontsize=12)
+```
+```
+#全国逐年变化图
+
+
+plt.figure(figsize=(16,9)) 
+line_fg(allyears,nation_data['2009':'2018'].values,'steelblue')
+
+
+plt.xlabel("years") #X轴标签
+plt.ylabel("number of E-Sports Company")  #Y轴标签
+plt.title("E-sports company in China") #图标题
+plt.show()  #显示图
+```
+```
+#上海海南变化折线图
+plt.figure(figsize=(12,9)) 
+f1,=plt.plot(shanghai_data['2009':'2018'].index,shanghai_data['2009':'2018'].values,'-',color='goldenrod',linewidth=2,marker = '^',markersize = 6,markerfacecolor='brown')   
+f2,=plt.plot(hainan_data.index,hainan_data.values,'-',color='lightcoral',linewidth=2,marker = 'o',markersize = 6,markerfacecolor='brown')
+plt.legend(handles = [f1, f2,], labels = ['Shanghai', 'Hainan'], loc = 'best',fontsize=12)
+```
+```
+#海南资本
+moneylist=[]
+for i in df["注册资本"]:
+    try:
+        m=pd.to_numeric(i.split('万',1)[0])
+        m=m*10000
+    except:
+        m=np.nan
+    moneylist.append(m)
+moneylist
+df['moneylist']=moneylist
+hainan_mon=df[df['所属省份']=='海南']['moneylist']
+hainan_year=df[df['所属省份']=='海南']['years']
+```
+```
+hainan_y=hainan_year.sort_values(ascending=True)
+hainan_y
+#hainan_m=hainan_mon.sort_values(ascending=True)
+#hainan_m
+```
+```
+plt.figure(figsize=(12,9)) 
+plt.scatter(hainan_y,hainan_m,c=hainan_y,cmap=plt.cm.Blues,edgecolor='none',s=100)
+plt.title('Resgistered Capital of Hainan Companies')
+plt.xlabel('year')
+plt.ylabel('Registered Capital')
+plt.tick_params(axis='both',which='both',labelsize=14)
+plt.show
+#plt.savefig('hainan_capital.png',bbox_inches='tight')
+```
+```
+#pygal module
+num_5=[places['海南'],gd_group['深圳市'],places['上海'],places['北京'],gd_group['广州市']]
+num_5
+```
+```
+num_5=[places['海南'],gd_group['深圳市'],places['上海'],places['北京'],gd_group['广州市']]
+hist=pygal.Bar()
+hist.title='E-sports related companies in five cities'
+hist.x_labels=['Hainan','Shenzhen','Shanghai','Beijing','Guangzhou']
+hist.x_title='Regions'
+hist.y_title='Numbers of E-sport-related Companies'
+hist.add('Numbers',num_5)
+#pygal.Radar(print_values=True)
+hist.render_to_file('five regions.svg')
+#hist.render()
+```
+```
+hist=pygal.Bar()
+hist.title='Top10 Provinces of E-sports related companies'
+hist.x_labels=provinces
+hist.x_title='Provinces'
+hist.y_title='Numbers of E-sport-related Companies'
+hist.add('Numbers',places[0:10].values)
+hist.render_to_file('Provinces.svg')
+```
+```
+line_chart=pygal.Line()
+line_chart.title='Hainan VS Shanghai'
+line_chart.x_labels=allyears
+line_chart.add('Hainan',hainan_data.values)
+line_chart.add('Shanghai',shanghai_data['2009':'2018'].values)
+line_chart.render_to_file('Hainan&Shanghai.svg')
+```
+```
+line_national=pygal.Line()
+line_national.title='National Change in 10 years'
+line_national.x_labels=allyears
+line_national.add('National',nation_data['2009':'2018'].values)
+
+line_national.render_to_file('National.svg')
+```
  
 ## 3.Results
 ### 3.1 The development trend of China’s e-sports-related companies
