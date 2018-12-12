@@ -43,6 +43,7 @@ Lastly, we wonder  if there are any other factors that relate to the development
 ### 2.2 Data Acquisition
 The picture below is one of our targeted webpages, Sina News, in inspecting mode.  We found that Sina News was built in html pages, so we used Request and Beautifulsoup modules to scrape and parse the pages. In the process of  data acquisition, we encountered two major difficulties: one was page looping and the other was source split. Financial news related to e-sports on Sina News were over 80 pages, so the address of website that we crawled was changing. Based on web observation, we found the rule of the changing page number of Sina News. Therefore, we controlled the page looping by generating a sequence of numbers that arranged in orders. 
 Originanly, we decided to scrape the news pages where fields like titles and dates were structured. However, some of the news pages were deleted so we turned to crawl fields in search results pages. There was a new problem :most of the raw data were stored in the same line of code. To solve this problem, we split date and source from one list, as well as splitting year, month and day from date. After splitting data into appropriate classification, data cleaning became much easier to execute. 
+
 Picture 1   Screenshot of Sina News Website in inspecting mode
 ![webpage](https://github.com/zhuang27149/e-sport-company/blob/master/images/webpage.png)
 
@@ -182,7 +183,8 @@ for a, b in zip(x_1, y_1):
 plt.legend()
 plt.show()  #显示图
 ```
- Table 1   An overview of raw data from Sina News
+
+Table 1   An overview of raw data from Sina News
  ![rawdataofsinanews](https://github.com/zhuang27149/e-sport-company/blob/master/images/sinanews-raw.png)
 
 Table 2   An overview of clean data from Sina News
