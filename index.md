@@ -43,15 +43,144 @@ Lastly, we wonder  if there are any other factors that relate to the development
 ### 2.2 Data Acquisition
 The picture below is one of our targeted webpages, Sina News, in inspecting mode.  We found that Sina News was built in html pages, so we used Request and Beautifulsoup modules to scrape and parse the pages. In the process of  data acquisition, we encountered two major difficulties: one was page looping and the other was source split. Financial news related to e-sports on Sina News were over 80 pages, so the address of website that we crawled was changing. Based on web observation, we found the rule of the changing page number of Sina News. Therefore, we controlled the page looping by generating a sequence of numbers that arranged in orders. 
 Originanly, we decided to scrape the news pages where fields like titles and dates were structured. However, some of the news pages were deleted so we turned to crawl fields in search results pages. There was a new problem :most of the raw data were stored in the same line of code. To solve this problem, we split date and source from one list, as well as splitting year, month and day from date. After splitting data into appropriate classification, data cleaning became much easier to execute. 
-
-
 ![webpage](https://github.com/zhuang27149/e-sport-company/blob/master/images/webpage.png)
 
+```
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import time
+```
+```
+#爬取关键字为“电竞”，范围为新浪新闻财经频道1到88页，约为2018年到2006年
+base_url='http://search.sina.com.cn/?c=news&q=%B5%E7%BE%BA&range=title&num=10&col=1_7&source=&from=&country=&size=&time=&a=&page={}&pf=2131425496&ps=2132080888&dpc=1'
+
+all_datetime = []
+all_source = []
+sourcelist=[]
+datelist=[]
+yearlist = []
+monthlist = []
+daylist = []
+titlelist=[]
+all_link= []
+
+
+for page in range(0, 89):
+    url = base_url.format(page)
+    req = requests.get(url,headers={'Accept-Encoding': ''})
+    #req.encoding = 'UTF-8'
+    soup = BeautifulSoup(req.text, 'html.parser')
+    div_name = soup.find_all('h2')
+    title=[i.find('a') for i in div_name]
+   #links = soup.find_all('div',class_='r-info r-info2')
+    #for item in links:
+    #    link = item.find('a').attrs['href']
+     #   all_link.append(link)
+    for a in title:
+        titlelist.append(a.get_text())
+        
+    div_date_source = soup.find_all('span', class_='fgray_time')
+    date_source = [a.get_text() for a in div_date_source]
+  
+    for i in date_source:
+        sourcelist.append(i.split(" ",2)[0])
+        datelist.append(i.split(' ',2)[1])
+        #print(datelist)
+        t=i.split(' ',2)[1]
+        yearlist.append(t.split("-",2)[0])
+        monthlist.append(t.split("-",2)[1])
+        daylist.append(t.split("-",2)[2])
+     
+
+
+df = pd.DataFrame({'title':titlelist,
+                    'source':sourcelist,
+                   'year':yearlist,
+                 'month':monthlist,
+                  'day':daylist})
+
+df
+
+df.to_csv("sinanews_dianjing1.csv")
+```
+```
+df_dianjing1 = pd.read_csv('sinanews_dianjing1.csv')
+df_dianjing1.head()
+```
 
 ### 2.3 Data Processing
 There are two parts of the data processing, one is data processing of Sina financial news of e-sports, and the other is data processing of e-sports related companies from Tianyancha.
 #### 2.3.1 Data processing of sina.news
 Firstly, the formats of data that we got from Sina News which was collected according to the keywords of “电竞”and “电子竞技” were  two CSV files. So, we merged two CSV files into one and dropped the duplicated data. Meanwhile, we aimed to look up news from the latest 10 years so we set conditions and got news from 2009 to 2018.
+``` 
+result.to_csv("hebing1.csv")
+df_dianjing5 = result
+df_dianjing5.head()
+```
+```
+df_dianjing6 = pd
+df_dianjing6 = df_dianjing5.drop_duplicates('title')
+df_dianjing6.sort_values(by = "year",ascending = False)
+df_dianjing6.to_csv("hebing.csv")
+```
+```
+import matplotlib.pyplot as plt
+import seaborn as sns
+df6 =pd.read_csv('hebing.csv')
+df5 = pd
+df5 = df6.loc[df6['year']> 2008]
+df5
+```
+```
+dict_year = {}
+for key in df5['year']:
+    dict_year[key] = dict_year.get(key, 0) + 1
+print(dict_year)
+```
+```
+def sortedDictValues1(dict_year): 
+    items = adict.items() 
+    items.sort() 
+    return [value for key, value in items] 
+print(dict_year)
+```
+```
+new_list = []
+new_list = sorted(dict_year.items(), key = lambda d:d[0])
+new_dict = {}
+for i in new_list:
+    new_dict[i[0]] = i[1]                
+new_dict
+```
+```
+x1 = []
+for i in new_dict.keys():
+        x1.append(i)
+
+print(x1)
+
+y1 = []
+for i in new_dict.values():
+    y1.append(i)
+print(y1)
+```
+```
+#X轴，Y轴数据
+x_1 = x1
+y_1 = y1
+#plt.figure(figsize=(16,8)) #创建绘图对象
+plt.plot(x_1,y_1,'o-',label='News',color = 'skyblue')   #在当前绘图对象绘图（X轴，Y轴）
+plt.xlabel("year") #X轴标签
+plt.ylabel("number of news")  #Y轴标签
+plt.title("News about E-sports in China") #图标题
+
+for a, b in zip(x_1, y_1):
+    plt.text(a, b, b, ha='center', va='bottom', fontsize=8)
+
+plt.legend()
+plt.show()  #显示图
+```
  
  ![rawdataofsinanews](https://github.com/zhuang27149/e-sport-company/blob/master/images/sinanews-raw.png)
 (the raw data)
