@@ -187,7 +187,7 @@ Table 2   An overview of clean data from Sina News
 
 
 #### 2.3.2 Data processing of tianyancha
-Next, we cleaned the data from Tianyancha. On one hand,  the column of “注册资本(registered capital)”was string instead of numeric so it was unable to make a ranking.We transformed   the string type into numeric and created a new column called ’moneylist’, whose value can be sorted.
+Next, we cleaned the data from Tianyancha. On one hand,  the column of “注册资本(registered capital)” was string instead of numeric so it was unable to make a ranking.We transformed   the string type into numeric and created a new column called ’moneylist’, whose value can be sorted.
 On the other hand, we only need data of years when the e-sports companies were established, while  the column of “成立日期(date of establishment)” contained too much information. So, we extracted the years and put them into a new list “years”.
 After adjusting the column, the new data frame is as shownin this table below.
 
@@ -198,9 +198,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import pygal
-```
-```
-!pip install pygal
 ```
 ```
 df=pd.read_excel('121.xlsx',encoding='utf-8')
